@@ -24,84 +24,103 @@
   </head>
   <body>
 
-    <header>
-      <div class="logo">
-          <!--link img source -->
-          <img>
-      </div>
-      <nav>
-          <ul id="navbar">
-              <li><a href="index.html">Get New Plans</a></li>
-              <li><a href="saved.html">Saved Plans</a></li>
-          </ul>
-      </nav>
-  </header>
-
-  <main>
-    <section class="title">
+    <header><h1>Making Last Minute Plans?</h1>
+      <h2>We've got you Covered!</h2>
+      
+      <h3>Your One Stop Site For Last Minute Plans</h3></header>
       <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
       <p class="description">If you're feeling adventurous, click on Suprise Me! and see on what kind of culinary adventure we take you on!</p>
-    </section>
-
-	  <!--Questions & Dropboxes-->
-
- <!-- Dropdown Trigger Cuisine-->
- <p>What kind of food are you in the mood for?</p>
- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Hmm...</a>
-
- <!-- Dropdown Structure Cuisine -->
- <ul id='dropdown1' class='dropdown-content cuisine-selection'>
-   <li><a href="#!">American</a></li>
-   <li><a href="#!">Asian</a></li>
-   <li><a href="#!">Chinese</a></li>
-   <li><a href="#!">Kosher</a></li>
-   <li><a href="#!">Italian</a></li>
-   <li><a href="#!">Mexican</a></li>
-   <li><a href="#!">Nordic</a></li>
-   
- </ul>
-
-  <!-- Dropdown Trigger Dietary Restrictions-->
- <p>Any dietary restrictions?</p>
- <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>I do enjoy not dying...</a>
-
- <!-- Dropdown Structure Dietary Restrictions-->
- <ul id='dropdown2' class='dropdown-content dietary-selection  dietaryRestrictions'>
-   <li><a href="#!">Dairy-Free</a></li>
-   <li><a href="#!">Gluten-Free</a></li>
-   <li><a href="#!">Keto-Friendly</a></li>
-   <li><a href="#!">Kosher</a></li>
-   <li><a href="#!">Peanut-Free</a></li>
-   <li><a href="#!">Vegan</a></li>
-   
-   
- </ul>
-
-  <!-- Dropdown Trigger Movie Genre-->
-  <p>What genre of movie sounds good?</p>
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Well...</a>
- 
-  <!-- Dropdown Structure Movie Genre-->
-  <ul id='dropdown3' class='dropdown-content genre-selection  movieGenre'>
-    <li><a href="#!">Action</a></li>
-    <li><a href="#!">Comedy</a></li>
-    <li><a href="#!">Drama</a></li>
-    <li><a href="#!">Horror</a></li>
-    <li><a href="#!">Romance</a></li>
-    <li><a href="#!">Vegan</a></li>
-    
-    
-  </ul>
       
-
-    <!--Sumbit-->
-    <p>Ready for the best-laid plans?</p>
-    </p><button class="btn btn-info btn-block">Lets Go!</button></p>
+      
+        <!--Questions & Dropboxes-->
+          
+            <!--Cuisine Type-->
+      <label for="cuisineType">What kind of food are you and your partner in the mood for?:</label>
+      
+      <select name="cuisineType" id="cuisineType">
+        <option value="" disabled selected>What kind of food are you in the mood for?</option>
+        <option value="American">American</option>
+        <option value="Asian">Asian</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Nordic">Nordic</option>
+      </select> </p>
     
-    </p> Not Picky? Feeling Frisky? </p>
-
-    <button class="btn btn-info btn-block">Surprise Me!</button>
-  </main>  
+          
+              <!--Dietary Restrictions-->
+      
+      
+      
+      <label for="dietaryRestrictions">Any dietary restrictions?:</label>
+      
+      <select name="dietaryRestrictions" id="dietaryRestrictions">
+        <option value="" disabled selected>Any Dietary Restrictions?</option>
+        <option value="dairy-free">Dairy-Free</option>
+        <option value="gluten-free">Gluten-Free</option>
+        <option value="keto-friendly">Keto-Friendly</option>
+        <option value="kosher">Kosher</option>
+        <option value="peanut-free">Peanut-Free</option>
+        <option value="vegan">vegan</option>
+      </select> </p>
+      
+      
+          <!--Movie Genre-->
+      
+      
+      <label for="movieGenre">What movie genre sounds good right now?:</label>
+      
+      <select name="movieGenre" id="movieGenre">
+        <option value="" disabled selected>What movie genre sounds good right now?</option>
+        <option value="28">Action</option>
+        <option value="35">Comedy</option>
+        <option value="18">Drama</option>
+        <option value="27">Horror</option>
+        <option value="10749">Romance</option>
+        
+      </select> </p>
+      
+      
+      
+      
+      </p><button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info btn-block">Lets Go!</button></p>
+      
+      <!-- Modal Structure 
+      <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="btn green modal-close waves-effect waves-green btn-flat">Yes! Stick to the Plan!</a>
+            <a href="#!" class="btn red modal-close waves-effect waves-green btn-flat">No! These Plans Suck!</a>
+          </div>
+        </div>
+      -->
+        <!--Modal Trigger
+       <script>$(document).ready(function(){
+          $('.modal').modal();
+        }); 
+        </script>
+      -->
+      </p> Not Picky? Feeling Frisky? </p>
+      
+      
+      
+        
+          
+          
+          <button class="btn btn-info btn-block">Surprise Me!</button>
+      
+      
+      
+       <!--JQuery-->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+        <i class="material-icons right">send</i>
+       </script>
+        <script src="./assets/results.js"></script>
+          <script src="./assets/script.js"></script>
+        </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
