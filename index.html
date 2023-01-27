@@ -45,41 +45,57 @@
 
 	  <!--Questions & Dropboxes-->
 
-  	<!--Cuisine Type-->
-    <label for="cuisineType">What kind of food are you and your partner in the mood for?:</label>
-    <select name="cuisineType" id="cuisineType">
-      <option value="" disabled selected>-----</option>
-      <option value="american">American</option>
-      <option value="asian">Asian</option>
-      <option value="chinese">Chinese</option>
-      <option value="asian">Kosher</option>
-      <option value="italian">Italian</option>
-      <option value="mexican">Mexican</option>
-      <option value="nordic">Nordic</option>
-    </select> </p>
+ <!-- Dropdown Trigger Cuisine-->
+ <p>What kind of food are you in the mood for?</p>
+ <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Hmm...</a>
 
-      <!--Dietary Restrictions-->
-    <label for="dietaryRestrictions">Any dietary restrictions?:</label>
-    <select name="dietaryRestrictions" id="dietaryRestrictions">
-      <option value="" disabled selected>-----</option>
-      <option value="Dairy-Free">Dairy-Free</option>
-      <option value="Gluten-Free">Gluten-Free</option>
-      <option value="Keto-Friendly">Keto-Friendly</option>
-      <option value="Kosher">Kosher</option>
-      <option value="Peanut-Free">Peanut-Free</option>
-    </select> </p>
+ <!-- Dropdown Structure Cuisine -->
+ <ul id='dropdown1' class='dropdown-content cuisine-selection'>
+   <li><a href="#!">American</a></li>
+   <li><a href="#!">Asian</a></li>
+   <li><a href="#!">Chinese</a></li>
+   <li><a href="#!">Kosher</a></li>
+   <li><a href="#!">Italian</a></li>
+   <li><a href="#!">Mexican</a></li>
+   <li><a href="#!">Nordic</a></li>
+   
+ </ul>
 
-	  <!--Movie Genre-->
-    <label for="movieGenre">What movie genre sounds good right now?:</label>
-    <select name="movieGenre" id="movieGenre">
-      <option value="" disabled selected>-----</option>
-      <option value="Action">Action</option>
-      <option value="Comedy">Comedy</option>
-      <option value="Drama">Drama</option>
-      <option value="Horror">Horror</option>
-      <option value="Romance">Romance</option>
-    </select> </p>
+  <!-- Dropdown Trigger Dietary Restrictions-->
+ <p>Any dietary restrictions?</p>
+ <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>I do enjoy not dying...</a>
 
+ <!-- Dropdown Structure Dietary Restrictions-->
+ <ul id='dropdown2' class='dropdown-content dietary-selection  dietaryRestrictions'>
+   <li><a href="#!">Dairy-Free</a></li>
+   <li><a href="#!">Gluten-Free</a></li>
+   <li><a href="#!">Keto-Friendly</a></li>
+   <li><a href="#!">Kosher</a></li>
+   <li><a href="#!">Peanut-Free</a></li>
+   <li><a href="#!">Vegan</a></li>
+   
+   
+ </ul>
+
+  <!-- Dropdown Trigger Movie Genre-->
+  <p>What genre of movie sounds good?</p>
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Well...</a>
+ 
+  <!-- Dropdown Structure Movie Genre-->
+  <ul id='dropdown3' class='dropdown-content genre-selection  movieGenre'>
+    <li><a href="#!">Action</a></li>
+    <li><a href="#!">Comedy</a></li>
+    <li><a href="#!">Drama</a></li>
+    <li><a href="#!">Horror</a></li>
+    <li><a href="#!">Romance</a></li>
+    <li><a href="#!">Vegan</a></li>
+    
+    
+  </ul>
+      
+
+    <!--Sumbit-->
+    <p>Ready for the best-laid plans?</p>
     </p><button class="btn btn-info btn-block">Lets Go!</button></p>
     
     </p> Not Picky? Feeling Frisky? </p>
@@ -87,9 +103,12 @@
     <button class="btn btn-info btn-block">Surprise Me!</button>
   </main>  
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	  <script src="./assets/results.js"></script>
     <script src="./assets/script.js"></script>
+    <script src="./assets/saved.js"></script>
+    
   </body>
 
 </html>
