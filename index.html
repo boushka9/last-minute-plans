@@ -9,17 +9,20 @@
     <title>Last Minute Plans Main Page</title>
 
     <!--Header Text-->    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--Body Text-->
+    Body Text-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- import bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -49,47 +52,60 @@
     <label for="cuisineType">What kind of food are you and your partner in the mood for?:</label>
     <select name="cuisineType" id="cuisineType">
       <option value="" disabled selected>-----</option>
-      <option value="american">American</option>
-      <option value="asian">Asian</option>
-      <option value="chinese">Chinese</option>
-      <option value="asian">Kosher</option>
-      <option value="italian">Italian</option>
-      <option value="mexican">Mexican</option>
-      <option value="nordic">Nordic</option>
+      <option value="American">American</option>
+      <option value="Asian">Asian</option>
+      <option value="Chinese">Chinese</option>
+      <option value="French">French</option>
+      <option value="Italian">Italian</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Nordic">Nordic</option>
     </select> </p>
 
       <!--Dietary Restrictions-->
-    <label for="dietaryRestrictions">Any dietary restrictions?:</label>
-    <select name="dietaryRestrictions" id="dietaryRestrictions">
+    <label for="health">Any dietary restrictions?:</label>
+    <select name="health" id="dietaryRestrictions">
       <option value="" disabled selected>-----</option>
-      <option value="Dairy-Free">Dairy-Free</option>
-      <option value="Gluten-Free">Gluten-Free</option>
-      <option value="Keto-Friendly">Keto-Friendly</option>
-      <option value="Kosher">Kosher</option>
-      <option value="Peanut-Free">Peanut-Free</option>
+      <option value="dairy-free">Dairy-Free</option>
+      <option value="gluten-free">Gluten-Free</option>
+      <option value="keto-friendly">Keto-Friendly</option>
+      <option value="kosher">Kosher</option>
+      <option value="peanut-free">Peanut-Free</option>
     </select> </p>
 
 	  <!--Movie Genre-->
     <label for="movieGenre">What movie genre sounds good right now?:</label>
     <select name="movieGenre" id="movieGenre">
       <option value="" disabled selected>-----</option>
-      <option value="Action">Action</option>
-      <option value="Comedy">Comedy</option>
-      <option value="Drama">Drama</option>
-      <option value="Horror">Horror</option>
-      <option value="Romance">Romance</option>
+      <option value="28">Action</option>
+      <option value="35">Comedy</option>
+      <option value="18">Drama</option>
+      <option value="27">Horror</option>
+      <option value="10749">Romance</option>
     </select> </p>
 
-    </p><button class="btn btn-info btn-block">Lets Go!</button></p>
-    
-    </p> Not Picky? Feeling Frisky? </p>
+</p><button class="btn btn-info btn-block" id="choiceBtn">Lets Go!</button></p>
 
+
+</p> Not Picky? Feeling Frisky? </p>
+
+
+
+	
+    
+    
     <button class="btn btn-info btn-block">Surprise Me!</button>
   </main>  
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	  <script src="./assets/results.js"></script>
-    <script src="./assets/script.js"></script>
+
+<h3>[Description]</h3></header>
+<div id="food-search"> </div>
+<p class="description">Sample Test</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="./assets/results.js"></script>
+  <script type='text/javascript' src='./assets/config.js'></script>
+  <script src="./assets/script.js"></script>
+    
   </body>
 
 </html>
