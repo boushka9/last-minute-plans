@@ -69,4 +69,4 @@ Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
 * [Materialize for CSS](https://materializecss.com/)
 * [Edimam](https://www.edamam.com/)
-* [Streaming Availability](https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/)
+* [The Movie Database API](https://www.themoviedb.org/)
