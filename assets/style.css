@@ -169,3 +169,7 @@ i {
 i:hover {
     font-size: 2.2rem;
 }
+
+select {
+    font-family: 'Montserrat', sans-serif;
+};
