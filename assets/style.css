@@ -1,10 +1,174 @@
-header, .result-head {
-    font-family: 'Nanum Myeongjo', serif;
-};
+:root {
+    --logo: #D44a55;
+    --light: #FAFAFA;
+    --pale: #e4e4e9;
+    --dark: #32364f;
+    --mid: #3d5a80;
+    --shadow: #363852;
+}
 
-.description {
+
+
+body, p {
     font-family: 'Montserrat', sans-serif;
-};
+    color: var(--dark);
+    background-color: var(--light);
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+
+/* MAIN PAGE STYLING */
+header#navhead, ul#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--dark);
+    font-family: 'Nanum Myeongjo', serif;
+    align-items: center;
+}
+
+header#navhead img {
+    width: 325px;
+    margin: 8px;
+}
+
+#navbar li {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+a[href], a:link {
+    color: var(--light);
+    text-decoration: none;
+} 
+/*nav links change color on hover*/
+#navbar li a:hover {
+    color: var(--logo);
+}
+
+
+main, .title, .selections, .food, .movie {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin: 15px;
+}
+
+.title {
+    text-align: center;
+}
+
+.selections {
+    margin: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+select {
+    display: inline;
+    background-color: var(--pale);
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+.food > label, .movie > label {
+    text-align: left;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.selections > .btn, .random > .btn {
+    align-self: center;
+    margin-top: 5px;
+    background-color: var(--mid);
+    box-shadow: 1.0px 2.1px 2.1px var(--shadow);
+    transition: all .2s ease-out;
+}
+
+.btn:hover {
+    box-shadow: 1.9px 3.8px 3.8px var(--mid);
+    background-color: var(--dark);
+}
+
+.btn, .btn:focus {
+    background-color: var(--dark);
+}
+
+.selections > .random {
+    margin: 5% 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.select-wrapper .caret {
+    display: none;
+}    
+
+select:focus {
+    outline: 1px solid var(--mid);
+}
+
+/* MAIN PAGE STYLING END*/
+
+/* RESULTS/SAVED PAGE STYLING */
+h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+    color: var(--logo);
+}
+.saved-container, .results-container { 
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 10%;
+    justify-content: center;
+}
+
+.saved-container > article, .results-container > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  var(--shadow);
+    background-color: var(--pale);
+}
+
+.saved-container > article img, .results-container > article img {
+    width: 100%;
+}
+
+.text {
+    padding: 0 20px 20px;
+    background-color: var(--pale);
+}
+
+.saved-name, .recipe-name, .movie-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 10px;
+    background-color: var(--pale);
+}
+
+.saved-name > p, .recipe-name > p, .movie-name > p {
+    background-color: var(--pale);
+    font-size: 2rem;
+    margin: 0px;
+}
+
+i {
+    color: var(--logo);
+    font-size: 1.8rem;
+    transition: all .2s ease-out;
+}
+
+i:hover {
+    font-size: 2.2rem;
+}
 
 select {
     font-family: 'Montserrat', sans-serif;

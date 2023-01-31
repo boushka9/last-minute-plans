@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Last Minute Plans Main Page</title>
+    <title>Last Minute Plans</title>
 
     <!--Header Text-->    
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,78 +14,86 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 
     <!--Body Text-->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf7c2b8cf6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/style.css">
     
   </head>
   <body>
 
-    <header><h1>Making Last Minute Plans?</h1>
-      <h2>We've got you Covered!</h2>
+    <header id="navhead">
+        <img id="logo" src="./assets/images/last minute plans.png">
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Get New Plans</a></li>
+                <li><a href="saved.html">Saved Plans</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+      <section class="title">
+        <h1>Making Last Minute Plans?</h1>
+        <h2>Can't decide what to eat or what movie to watch for date night?</h2>
+        <h2>We've got you covered!</h2>
+        <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
+      </section>
       
-      <h3>Your One Stop Site For Last Minute Plans</h3></header>
-      <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
-      <p class="description">If you're feeling adventurous, click on Suprise Me! and see on what kind of culinary adventure we take you on!</p>
-      
-      
-        <!--Questions & Dropboxes-->
-          
-            <!--Cuisine Type-->
-      <label for="cuisineType">What kind of food are you and your partner in the mood for?:</label>
-      
-      <select name="cuisineType" id="cuisineType">
-        <option value="" disabled selected>What kind of food are you in the mood for?</option>
-        <option value="American">American</option>
-        <option value="Asian">Asian</option>
-        <option value="Chinese">Chinese</option>
-        <option value="Italian">Italian</option>
-        <option value="Mexican">Mexican</option>
-        <option value="Nordic">Nordic</option>
-      </select> </p>
-    
-          
-              <!--Dietary Restrictions-->
-      
-      
-      
-      <label for="dietaryRestrictions">Any dietary restrictions?:</label>
-      
-      <select name="dietaryRestrictions" id="dietaryRestrictions">
-        <option value="" disabled selected>Any Dietary Restrictions?</option>
-        <option value="dairy-free">Dairy-Free</option>
-        <option value="gluten-free">Gluten-Free</option>
-        <option value="keto-friendly">Keto-Friendly</option>
-        <option value="kosher">Kosher</option>
-        <option value="peanut-free">Peanut-Free</option>
-        <option value="vegan">vegan</option>
-      </select> </p>
-      
-      
-          <!--Movie Genre-->
-      
-      
-      <label for="movieGenre">What movie genre sounds good right now?:</label>
-      
-      <select name="movieGenre" id="movieGenre">
-        <option value="" disabled selected>What movie genre sounds good right now?</option>
-        <option value="28">Action</option>
-        <option value="35">Comedy</option>
-        <option value="18">Drama</option>
-        <option value="27">Horror</option>
-        <option value="10749">Romance</option>
+      <!--Questions & Dropboxes-->
+  	  <!--Cuisine Type-->
+      <div class="selections">  
+        <div class="food">
+          <label for="cuisineType">What kind of food are you and your partner in the mood for?</label>
+          <select name="cuisineType" id="cuisineType">
+            <option value="" disabled="" selected=""></option>
+            <option value="american">American</option>
+            <option value="asian">Asian</option>
+            <option value="chinese">Chinese</option>
+            <option value="asian">Kosher</option>
+            <option value="italian">Italian</option>
+            <option value="mexican">Mexican</option>
+            <option value="nordic">Nordic</option>
+          </select>
+          <!--Dietary Restrictions-->
+          <label for="dietaryRestrictions">Any dietary restrictions?</label>
+          <select name="dietaryRestrictions" id="dietaryRestrictions">
+            <option value="" disabled="" selected=""></option>
+            <option value="Dairy-Free">Dairy-Free</option>
+            <option value="Gluten-Free">Gluten-Free</option>
+            <option value="Keto-Friendly">Keto-Friendly</option>
+            <option value="Kosher">Kosher</option>
+            <option value="Peanut-Free">Peanut-Free</option>
+          </select>
+        </div>
+
+        <!--Movie Genre--> 
+        <div class="movie">
+          <label for="movieGenre">What movie genre are you in the mood for?</label>
+          <select name="movieGenre" id="movieGenre">
+            <option value="" disabled="" selected=“”></option>
+            <option value="28">Action</option>
+            <option value="35">Comedy</option>
+            <option value="18">Drama</option>
+            <option value="27">Horror</option>
+            <option value="10749">Romance</option>
+          </select>
+        </div> 
+
+        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info">Lets Go!</button>
+
+        <br>
+
+        <div class="random">
+          <h2>Feeling Frisky? </h2>
+          <p class="description">Click on Suprise Me! and see on what kind of culinary and movie adventure we take you on!</p>
         
-      </select> </p>
-      
-      
-      
-      
-      </p><button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info btn-block">Lets Go!</button></p>
-      
-      <!-- Modal Structure 
+          <button class="btn btn-info">Surprise Me!</button>
+
+      </div>
+
+                <!-- Modal Structure 
       <div id="modal1" class="modal">
           <div class="modal-content">
             <h4>Modal Header</h4>
@@ -103,15 +111,7 @@
         }); 
         </script>
       -->
-      </p> Not Picky? Feeling Frisky? </p>
-      
-      
-      
-        
-          
-          
-          <button class="btn btn-info btn-block">Surprise Me!</button>
-      
+    </main>
       
       
        <!--JQuery-->
