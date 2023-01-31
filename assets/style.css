@@ -7,13 +7,6 @@
     --shadow: #363852;
 }
 
-header, .result-head {
-    font-family: 'Nanum Myeongjo', serif;
-};
-
-.description {
-    font-family: 'Montserrat', sans-serif;
-}
 body, p {
 font-family: 'Montserrat', sans-serif;
 color: var(--dark);
@@ -24,6 +17,7 @@ font-size: 20px;
 
 
 /* MAIN PAGE STYLING */
+
 header#navhead, ul#navbar {
 display: flex;
 flex-direction: row;
@@ -53,8 +47,6 @@ text-decoration: none;
 /*nav links change color on hover*/
 #navbar li a:hover {
 color: var(--logo);
-}
-
 
 main, .title, .selections, .food, .movie {
 display: flex;
