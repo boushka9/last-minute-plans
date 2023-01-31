@@ -1,28 +1,21 @@
-// $(document).ready(function () { 
+$(document).ready(function(){
+    //get the button by id 
+    $("#clearBtn").click(function(){
+        $("#clearModal").css("display", "block");
+    });
+    //when clicking the span id "close," the modal goes invisible 
+    $(".close").click(function(){
+        $("#clearModal").css("display", "none");
+    });
+    //when clicking anywhere outside of the window, the modal goes invisible
+    $(window).click(function(event){
+        if(event.target == $("#clearModal")){
+            $("#clearModal").css("display", "none");
+        }
+    });
 
 
-//  //THIS FUNCTION TO RESULTS.JS PAGE, WHEN RESULTS ARE RENDERED, BUTTON CAN BE CLICKED    
-//     // On click, if item is not included in
-//     $("#favorite-btn").on("click", (event) => {
-//         event.preventDefault();
-//         // If city name is not in cityHistory, add it to localStorage with key favorite to retrieve value
-//         if (favoriteHistory.includes(itemName) === false) {
-//             favoriteHistory.push(itemName);
-//             localStorage.setItem("favorite", JSON.stringify(favoriteHistory));
-//         }
-//     })
-
-//     // on page load, for each savedItem i of favoriteHistory, run func to render
-//     for (var i = 0; i < favoriteHistory.length; i++) {
-//         renderFavorites(favoriteHistory[i]);
-//     }
-
-//     function renderFavorites(favCards) {
-//         let favItem = $("<div>").addClass("fav-item").text(favCards);
-//         $("saved-container").append(favItem);
-//     }
-
-    
+});
 
 
 
@@ -34,6 +27,3 @@
 
 
 
-
-
-// });

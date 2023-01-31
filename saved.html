@@ -45,7 +45,7 @@
                   <p class="text" class="saved-description">Bold spices like ginger, cumin, and curry powder add rich layers of flavor to succulent chicken coated in a creamy tomato-based sauce. .</p>
                 </div> 
               </article>
-              <article class=saved-rec">
+              <article class="saved-rec">
                 <img class="saved-img" src="./assets/images/movie-ex.png">
                 <div class="card-bottom">
                   <div class="saved-name">
@@ -56,9 +56,30 @@
                 </div>  
               </article>
         </div>
+
+          <!-- Trigger/Open The Modal -->
+<button id="clearBtn">Clear All</button>
+
+<!-- The Modal -->
+<div id="clearModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Whoah whoah whoah. If you proceed, you're gonna delete all your favorites. You sure you're ready for that level of commitment?</p>
+    <button id="no">Oh whoops. Never mind.</button> <button id="yes">I know what I'm about, son.</button>
+  </div>
+
+</div>
     </main>
 
+
+<!--JQuery Link-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+   </script>
+    <!--JS Links-->
 	<script src="./assets/results.js"></script>
+    <script src="./assets/saved.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 
