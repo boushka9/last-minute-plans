@@ -13,7 +13,17 @@ $(document).ready(function(){
             $("#clearModal").css("display", "none");
         }
     });
+        //when you click the "whoops" button, the modal disappears
+        $("#no").click(function(){
+        $("#clearModal").css("display", "none")
 
+        })
+
+        //when you click the "Proceed" button, the modal disappears
+        $("#yes").click(function(){
+            $("#clearModal").css("display", "none")
+    
+            })
 
 });
 
