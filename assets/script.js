@@ -6,7 +6,6 @@ $(document).ready(function () {
      //let simpleSearch = document.getElementById("choiceBtn");
    
   
- 
    //create event listener for the choiceBtn and call recipeApiRequest
  
    $("#choiceBtn").on("click", async () => {
@@ -24,3 +23,4 @@ $(document).ready(function () {
  
  
  });
+
