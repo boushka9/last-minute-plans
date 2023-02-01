@@ -15,12 +15,11 @@ If you're "feeling frisky," click the button to generate a random combination of
 
 Your results will be displayed on the next page.
 
-<img src="readmeassets/results.png" alt="Your Results" width="300"/>
+<img src="readmeassets/resultspage.png" alt="Your Results" width="300"/>
 
-Find something you love? Click the favorites button to save a movie or recipe you'd like to revisit. Clicking the (MY FAVORITES) button will bring you to all the movies and recipes that you've saved in the past so you can find them easily.
+To help you remember search combinations of deliciousness past, your past searches can be found at the bottom of the page. You can clear them out if you want to start fresh.
 
-<img src="readmeassets/favorites.png" alt="Your Favorites" width="300"/>
-
+<img src="readmeassets/searchhistory.png" alt="Your Search History" width="300"/>
 
 ## Wire Frames and User Story
 
