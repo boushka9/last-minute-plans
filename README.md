@@ -3,23 +3,23 @@
 ## Description
 
 Last Minute Plans is an app to put an end to the age old question, "I don't know, what do you want to do?"
-<img src="readmeassets/home.png" alt="Last Minute Plans Home Page" />
+<img src="readmeassets/home.png" alt="Last Minute Plans Home Page" width="300"/>
 
 Designed to generate recipes and movie suggestions, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
 
-<img src="readmeassets/options.png" alt="Last Minute Plans Option Select" />
+<img src="readmeassets/options.png" alt="Last Minute Plans Option Select" width="300"/>
 
 If you're "feeling frisky," click the button to generate a random combination of movie and recipe and let fate decide!
 
-<img src="readmeassets/frisky.png" alt="The Frisky Button" />
+<img src="readmeassets/frisky.png" alt="The Frisky Button" width="300"/>
 
 Your results will be displayed on the next page.
 
-<img src="readmeassets/results.png" alt="Your Results" />
+<img src="readmeassets/results.png" alt="Your Results" width="300"/>
 
 Find something you love? Click the favorites button to save a movie or recipe you'd like to revisit. Clicking the (MY FAVORITES) button will bring you to all the movies and recipes that you've saved in the past so you can find them easily.
 
-<img src="readmeassets/favorites.png" alt="Your Favorites" />
+<img src="readmeassets/favorites.png" alt="Your Favorites" width="300"/>
 
 
 ## Wire Frames and User Story
@@ -40,13 +40,13 @@ THEN My selections will appear on the "My Favorites Page" in the app
 
 ### Wire Frames
 
-<img src="readmeassets/LMPMain.jpg" alt="Main Page"/>
+<img src="readmeassets/LMPMain.jpg" alt="Main Page" width="300"/>
 Last Minute Plans Main Page
 
-<img src="readmeassets/LMPResults.jpg" alt="Results Page"/>
+<img src="readmeassets/LMPResults.jpg" alt="Results Page" width="300"/>
 Last Minute Plans Results Page
 
-<img src="readmeassets/LMPFavorites.jpg" alt="Favorites Page"/>
+<img src="readmeassets/LMPFavorites.jpg" alt="Favorites Page" width="300"/>
 Last Minute Plans Favorites Page
 
 
@@ -72,3 +72,4 @@ Inspiration, code snippets, etc.
 * [Edimam](https://www.edamam.com/)
 * [The Movie Database API](https://www.themoviedb.org/)
 * [W3 Schools "How to CSS/Modal"](https://www.w3schools.com/howto/howto_css_modals.asp)
+* [Challenge 6, the Weather App Project](https://boushka9.github.io/rainy-plastic-plants/)
