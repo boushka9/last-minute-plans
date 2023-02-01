@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <!--Import Materialize-->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Last Minute Plans</title>
 
     <!--Header Text-->    
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     
@@ -19,18 +19,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cf7c2b8cf6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/style.css">
-    <!-- import bootstrap cdn -->
+
+    <!-- import bootstrap cdn
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+     -->
   </head>
   <body>
     <header id="navhead">
-        <img id="logo" src="./assets/images/last minute plans.png">
+        <img id="logo" src="./assets/images/last minute plans.png" href="index.html">
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Get New Plans</a></li>
-                <li><a href="saved.html">Saved Plans</a></li>
             </ul>
         </div>
     </header>
@@ -40,33 +40,35 @@
         <h1>Making Last Minute Plans?</h1>
         <h2>Can't decide what to eat or what movie to watch for date night?</h2>
         <h2>We've got you covered!</h2>
-        <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
+        <p class="description">Select what you crazy kids are in the mood for down below and click "Let's Go!"</p>
       </section>
       
       <!--Questions & Dropboxes-->
   	  <!--Cuisine Type-->
       <div class="selections">  
         <div class="food">
-          <label for="cuisineType">What kind of food are you and your partner in the mood for?</label>
+          <label for="cuisineType">What kind of food sounds good tonight?</label>
           <select name="cuisineType" id="cuisineType">
             <option value="" disabled="" selected=""></option>
             <option value="american">American</option>
             <option value="asian">Asian</option>
-            <option value="chinese">Chinese</option>
-            <option value="asian">Kosher</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="kosher">Kosher</option>
             <option value="italian">Italian</option>
             <option value="mexican">Mexican</option>
-            <option value="nordic">Nordic</option>
+            <option value="indian">Indian</option>
           </select>
           <!--Dietary Restrictions-->
           <label for="dietaryRestrictions">Any dietary restrictions?</label>
           <select name="dietaryRestrictions" id="dietaryRestrictions">
             <option value="" disabled="" selected=""></option>
+            <option value="balanced">Balanced</option>
             <option value="dairy-free">Dairy-Free</option>
             <option value="gluten-free">Gluten-Free</option>
             <option value="keto-friendly">Keto-Friendly</option>
-            <option value="kosher">Kosher</option>
+            <option value="vegan">Vegan</option>
             <option value="peanut-free">Peanut-Free</option>
+            
           </select>
         </div>
 
@@ -83,29 +85,47 @@
           </select>
         </div> 
 
-        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info" id="choiceBtn">Lets Go!</button>
+        <button class="btn btn-info" id="choiceBtn">Let's Go!</button>
 
         <br>
 
         <div class="random">
           <h2>Feeling Frisky? </h2>
-          <p class="description">Click on Suprise Me! and see on what kind of culinary and movie adventure we take you on!</p>
+          <p class="description">Click on "Suprise Me!"" and see on what kind of culinary and movie adventure we take you on!</p>
         
           <button class="btn btn-info">Surprise Me!</button>
+        </div>
 
-      </div>
-	
-    
-    
-    <button class="btn btn-info btn-block">Surprise Me!</button>
-  </main>
-    
+        <br>
+
+        <section class="past-searches">
+          <h2>Check out your past plans!</h2>
+          <!--Empty ul to append li's to-->
+          <ul id="stored-searches"></ul>
+
+          <!-- Trigger/Open The Modal -->
+          <button class="btn btn-info" id="clearBtn">Clear History</button>
+
+          <!-- The Modal -->
+          <div id="clearModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Whoah whoah whoah. If you proceed, you're gonna delete all your past plans. You sure you're ready for that level of commitment?</p>
+              <div class="yes-no">
+                <button id="no" class="btn">Oh whoops. Never mind.</button> <button id="yes" class="btn">I know what I'm about, son.</button>
+              </div>
+            </div>
+          </div>
+
+         </section>
+    </main>
+  </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
-    <script src="./assets/saved.js"></script>
-
+    
     
   </body>
 
