@@ -38,14 +38,14 @@
         <h1>Making Last Minute Plans?</h1>
         <h2>Can't decide what to eat or what movie to watch for date night?</h2>
         <h2>We've got you covered!</h2>
-        <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
+        <p class="description">Select what you crazy kids are in the mood for down below and click "Let's Go!"</p>
       </section>
       
       <!--Questions & Dropboxes-->
   	  <!--Cuisine Type-->
       <div class="selections">  
         <div class="food">
-          <label for="cuisineType">What kind of food are you and your partner in the mood for?</label>
+          <label for="cuisineType">"What kind of food sounds good tonight?"?</label>
           <select name="cuisineType" id="cuisineType">
             <option value="" disabled="" selected=""></option>
             <option value="american">American</option>
@@ -81,52 +81,31 @@
           </select>
         </div> 
 
-        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info">Lets Go!</button>
+        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info" id="choiceBtn">Let's Go!</button>
 
         <br>
 
         <div class="random">
           <h2>Feeling Frisky? </h2>
-          <p class="description">Click on Suprise Me! and see on what kind of culinary and movie adventure we take you on!</p>
+          <p class="description">Click on "Suprise Me!"" and see on what kind of culinary and movie adventure we take you on!</p>
         
           <button class="btn btn-info">Surprise Me!</button>
-
-      </div>
-
-                <!-- Modal Structure 
-      <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="btn green modal-close waves-effect waves-green btn-flat">Yes! Stick to the Plan!</a>
-            <a href="#!" class="btn red modal-close waves-effect waves-green btn-flat">No! These Plans Suck!</a>
-          </div>
         </div>
-      -->
-        <!--Modal Trigger
-       <script>$(document).ready(function(){
-          $('.modal').modal();
-        }); 
-        </script>
-      -->
-    </main>
-      
-      
-       <!--JQuery-->
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
-        <i class="material-icons right">send</i>
-       </script>
-        <script src="./assets/results.js"></script>
-          <script src="./assets/script.js"></script>
-        </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	  <script src="./assets/results.js"></script>
+        <br>
+
+        <section class="past-searches">
+          <h2>Check out your past plans!</h2>
+          <ul id="stored-searches"></ul>
+          <button class="btn" id="clear">Clear History</button>
+         </section>
+    </main>
+  </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
-    <script src="./assets/saved.js"></script>
+    
     
   </body>
 

@@ -41,7 +41,7 @@ header#navhead img {
     font-size: 22px;
 }
 
-a[href], a:link {
+a[href], a:link, .search-li {
     color: var(--light);
     text-decoration: none;
 } 
@@ -51,22 +51,19 @@ a[href], a:link {
 }
 
 
-main, .title, .selections, .food, .movie {
+main, .title, .selections, .food, .movie, .past-searches  {
     display: flex;
     flex-direction: column;
 }
 
-main {
+main, .selections, .search-li  {
     margin: 15px;
 }
 
-.title {
-    text-align: center;
+.title, .past-searches  {
+    align-items: center;
 }
 
-.selections {
-    margin: 15px;
-}
 
 h2 {
     font-size: 30px;
@@ -126,18 +123,18 @@ h1 {
 }
 .saved-container, .results-container { 
     display: grid;
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(2, 300px);
     grid-gap: 10%;
     justify-content: center;
 }
 
-.saved-container > article, .results-container > article {
+.saved-container article, .results-container article {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  var(--shadow);
     background-color: var(--pale);
 }
 
-.saved-container > article img, .results-container > article img {
+.saved-container article img, .results-container article img {
     width: 100%;
 }
 
@@ -172,4 +169,26 @@ i:hover {
 
 select {
     font-family: 'Montserrat', sans-serif;
-};
+}
+
+#stored-searches {
+    margin-top: 0px;
+}
+
+.search-li {
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--mid);
+    box-shadow: 2px 2px 6px 0px  var(--shadow);
+    transition: all .2s ease-out;
+}
+
+.search-li:hover {
+    box-shadow: 1.9px 3.8px 3.8px var(--shadow);
+}
+
+/* MODAL STYLING */
+
+
+
