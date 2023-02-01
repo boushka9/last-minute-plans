@@ -39,158 +39,60 @@ $(document).ready(function () {
     console.log(movieResponse);
     useMovieResponse(movieResponse);
   }
-  //for loop for multiple cards... tbd
+
 
   // Create a function that takes data from recipeApiRequest and creates a card to dislay on results.html
   function useRecipeResponse(recipeResponse) {
-    //for (var i = 0; i < 5; i++) {
-      document.querySelector(".recipe-container-0").innerHTML = `
-  <div id="recipe-container">
-  <article id="recipe-rec">
-    <img class="recipe-img" src="${recipeResponse.hits[0].recipe.image}">
-    <div class="card-bottom">
-      <div class="recipe-name">
-        <p>${recipeResponse.hits[0].recipe.label}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <a class="text" class="recipe-description" href="${recipeResponse.hits[0].recipe.shareAs}" target="_blank"> Take me to Recipe</a>
-    </div> 
-  </article>
-</div>
-`;
-document.querySelector(".recipe-container-1").innerHTML =
-`<div id="recipe-container">
-  <article id="recipe-rec">
-    <img class="recipe-img" src="${recipeResponse.hits[1].recipe.image}">
-    <div class="card-bottom">
-      <div class="recipe-name">
-        <p>${recipeResponse.hits[1].recipe.label}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <a class="text" class="recipe-description" href="${recipeResponse.hits[1].recipe.shareAs}" target="_blank"> Take me to Recipe</a>
-    </div> 
-  </article>
-</div>
-`;
-document.querySelector(".recipe-container-2").innerHTML =
-`<div id="recipe-container">
-  <article id="recipe-rec">
-    <img class="recipe-img" src="${recipeResponse.hits[2].recipe.image}">
-    <div class="card-bottom">
-      <div class="recipe-name">
-        <p>${recipeResponse.hits[2].recipe.label}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <a class="text" class="recipe-description" href="${recipeResponse.hits[2].recipe.shareAs}" target="_blank"> Take me to Recipe</a>
-    </div> 
-  </article>
-</div>
-`;
-document.querySelector(".recipe-container-3").innerHTML =
-`<div id="recipe-container">
-  <article id="recipe-rec">
-    <img class="recipe-img" src="${recipeResponse.hits[3].recipe.image}">
-    <div class="card-bottom">
-      <div class="recipe-name">
-        <p>${recipeResponse.hits[3].recipe.label}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <a class="text" class="recipe-description" href="${recipeResponse.hits[3].recipe.shareAs}" target="_blank"> Take me to Recipe</a>
-    </div> 
-  </article>
-</div>
-`;
-document.querySelector(".recipe-container-4").innerHTML =
-`<div id="recipe-container">
-  <article id="recipe-rec">
-    <img class="recipe-img" src="${recipeResponse.hits[4].recipe.image}">
-    <div class="card-bottom">
-      <div class="recipe-name">
-        <p>${recipeResponse.hits[4].recipe.label}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <a class="text" class="recipe-description" href="${recipeResponse.hits[4].recipe.shareAs}" target="_blank"> Take me to Recipe</a>
-    </div> 
-  </article>
-</div>
-`;}
-    //};
+    const recipeCards = document.querySelectorAll(".recipe-container");
+    for (var i = 0; i < recipeCards.length; i++) {
+      recipeCards[i].innerHTML = "";
+
+      //set img to img element and append to empty string
+      let recipeImg = recipeResponse.hits[i].recipe.image;
+      let recipeImgEl = document.createElement("img");
+      recipeImgEl.setAttribute("src", recipeImg);
+      recipeCards[i].append(recipeImgEl);
+
+      //set recipe name as p element and append to empty string
+      let recipeName = recipeResponse.hits[i].recipe.label;
+      let recipeNameEl = document.createElement("p");
+      recipeNameEl.innerHTML = recipeName;
+      recipeCards[i].append(recipeNameEl);
+
+      //set recipe link as a element and append to empty string
+      let recipeLink = recipeResponse.hits[1].recipe.shareAs;
+      let recipeLinkEl = document.createElement("a");
+      recipeLinkEl.setAttribute("href", recipeLink);
+      recipeLinkEl.innerHTML = "See full recipe";
+      recipeCards[i].append(recipeLinkEl); 
+    }
+    ;}
 
   
-  // Same as recipe but movies to results.html
-  function useMovieResponse(movieResponse) {
-    //for (var i = 0; i < 5; i++) {
-    document.querySelector(".movie-container-0").innerHTML = 
-    `<div id="movie-container">
-        <article class=movie-rec">
-            <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[0].poster_path}">
-            <div class="card-bottom">
-              <div class="movie-name">
-                <p>${movieResponse.results[0].title}</p>
-                <i class="fa-solid fa-square-plus"></i>
-              </div>
-              <p class="text" class="movie-description">${movieResponse.results[0].overview}</p>
-            </div>  
-          </article>
-      </div>
-`;
-document.querySelector(".movie-container-1").innerHTML = `
-  <div id="movie-container">
-  <article class=movie-rec">
-      <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[1].poster_path}">
-      <div class="card-bottom">
-        <div class="movie-name">
-          <p>${movieResponse.results[1].title}</p>
-          <i class="fa-solid fa-square-plus"></i>
-        </div>
-        <p class="text" class="movie-description">${movieResponse.results[1].overview}</p>
-      </div>  
-  </article>
-</div>
-`;
-document.querySelector(".movie-container-2").innerHTML = `
-  <div id="movie-container">
-  <article class=movie-rec">
-      <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[2].poster_path}">
-      <div class="card-bottom">
-        <div class="movie-name">
-          <p>${movieResponse.results[2].title}</p>
-          <i class="fa-solid fa-square-plus"></i>
-        </div>
-        <p class="text" class="movie-description">${movieResponse.results[2].overview}</p>
-      </div>  
-  </article>
-</div>
-`;
-document.querySelector(".movie-container-3").innerHTML = `
-<div id="movie-container">
-<article class=movie-rec">
-    <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[3].poster_path}">
-    <div class="card-bottom">
-      <div class="movie-name">
-        <p>${movieResponse.results[3].title}</p>
-        <i class="fa-solid fa-square-plus"></i>
-      </div>
-      <p class="text" class="movie-description">${movieResponse.results[3].overview}</p>
-    </div>  
-</article>
-</div>
-`;
-document.querySelector(".movie-container-4").innerHTML = `
-  <div id="movie-container">
-  <article class=movie-rec">
-      <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[4].poster_path}">
-      <div class="card-bottom">
-        <div class="movie-name">
-          <p>${movieResponse.results[4].title}</p>
-          <i class="fa-solid fa-square-plus"></i>
-        </div>
-        <p class="text" class="movie-description">${movieResponse.results[4].overview}</p>
-      </div>  
-  </article>
-</div>
-`;
+     // Same as recipe but movies 
+    function useMovieResponse(movieResponse) {
+      const movieCards = document.querySelectorAll(".movie-container");
+      for (var i = 0; i < movieCards.length; i++) {
+        movieCards[i].innerHTML = "";
+
+        let movieImg = movieResponse.results[i].poster_path;
+        let movieImgEl = document.createElement("img");
+        movieImgEl.classList.add("size-img");
+        movieImgEl.setAttribute("src", "https://image.tmdb.org/t/p/original" + movieImg);
+        movieCards[i].append(movieImgEl);
+
+        let movieName = movieResponse.results[i].title;
+        let movieNameEl = document.createElement("p");
+        movieNameEl.classList.add("movie-name");
+        movieNameEl.innerHTML = movieName;
+        movieCards[i].append(movieNameEl);
+
+        let movieDescript = movieResponse.results[i].overview;
+        let movieDescriptEl = document.createElement("p");
+        movieDescriptEl.innerHTML = movieDescript;
+        movieCards[i].append(movieDescriptEl);
+      }
     }
- // }
+
   getParams();
 });
