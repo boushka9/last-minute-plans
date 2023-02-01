@@ -44,91 +44,50 @@ $(document).ready(function () {
     
     }
 
-    // clear local storage on click
-    $("#clear").on("click", () => {
-        localStorage.removeItem("pastSearch");
-        $("#stored-searches").empty();
-    })
-
-
-    //create variables to plug into the fetch request for API's based on selections made by user
-    let simpleSearch = document.getElementById("choiceBtn");
-      
-     
-    
-    //create event listener for the choiceBtn and call recipeApiRequest
-    
-    simpleSearch.addEventListener("click", () => {
-         //console.log(healthChoice + " " + region);
-         //console.log(genreSelect);
-        recipeApiRequest();
-        movieApiRequest();
-        //window.location.href = "results.html";
-        useRecipeResponse();
-        useMovieResponse();
+    //get the button by id 
+    $("#clearBtn").click(function(){
+        $("#clearModal").css("display", "block");
     });
     
-       //Create async function recipeApiRequest
-    async function recipeApiRequest() {
-        let diet = document.getElementById("dietaryRestrictions");
-        let cuisineType = document.getElementById("cuisineType");
-        let healthChoice = diet.value;
-        let region = cuisineType.value;
-        let recipeResults = await fetch(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=782a382f&app_key=44f8de3e7cf221622c3c1749bba1ae0d&health=" + healthChoice + "&cuisineType=" + region);
-        //console.log(recipeResults);
-        let recipeResponse = await recipeResults.json();
-        console.log(recipeResponse);
-        useRecipeResponse(recipeResponse)
-    }
-     //Create function to fetch movie by genre search
-    async function movieApiRequest () {
-         let genre = document.getElementById("movieGenre");
-         let genreSelect = genre.value;
-         let movieResults = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=1d3ebfae33dc1dce90cd215a42f368a5&with_genres=" + genreSelect)
-         let movieResponse = await movieResults.json();
-         console.log(movieResponse);
-         useMovieResponse(movieResponse)
-    }
-    
-     // Create a function that takes data from recipeApiRequest and creates a card to dislay on results.html
-    function useRecipeResponse(recipeResponse){
-      document.querySelector("#recipe-container").innerHTML = `
-      <div id="recipe-container">
-      <article id="recipe-rec">
-        <img class="recipe-img" src="${recipeResponse.hits[0].recipe.image}">
-        <div class="card-bottom">
-          <div class="recipe-name">
-            <p>${recipeResponse.hits[0].recipe.label}</p>
-            <i class="fa-solid fa-square-plus"></i>
-          </div>
-          <a class="text" class="recipe-description" href="${recipeResponse.hits[0].recipe.shareAs}"> Click here to see Recipe (draft... Sam I expect better letter combinations tomorrow) </a>
-        </div> 
-      </article>
-    </div>
-    `
-     }
-    // Same as recipe but movies to results.html
-     function useMovieResponse(movieResponse){
-      document.querySelector("#movie-container").innerHTML = `
-      <div id="movie-container">
-      <article class=movie-rec">
-          <img class="movie-img" src="https://image.tmdb.org/t/p/original${movieResponse.results[0].poster_path}">
-          <div class="card-bottom">
-            <div class="movie-name">
-              <p>${movieResponse.results[0].title}</p>
-              <i class="fa-solid fa-square-plus"></i>
-            </div>
-            <p class="text" class="movie-description">${movieResponse.results[0].overview}</p>
-          </div>  
-      </article>
-    </div>
-    `
-     }
-    
-   
+    //when clicking the span id "close," the modal goes invisible 
+    $(".close").click(function(){
+        $("#clearModal").css("display", "none");
+    });
 
+    //when clicking anywhere outside of the window, the modal goes invisible
+    $(window).click(function(event){
+        if(event.target == $("#clearModal")){
+            $("#clearModal").css("display", "none");
+        }
+    });
 
+     //when you click the "whoops" button, the modal disappears
+     $("#no").click(function(){
+        $("#clearModal").css("display", "none")
+     })
 
+     //when you click the "Proceed" button, the modal disappears and the local storage is cleared
+     $("#yes").click(function(){
+        $("#clearModal").css("display", "none");
+        localStorage.removeItem("pastSearch");
+        $("#stored-searches").empty();
+     })
 
-});
+  
+   //create event listener for the choiceBtn and call recipeApiRequest
+ 
+   $("#choiceBtn").on("click", async () => {
+     var diet = document.getElementById("dietaryRestrictions");
+     var cuisineType = document.getElementById("cuisineType");
+     var healthChoice = diet.value;
+     var region = cuisineType.value;
+     var genre = document.getElementById("movieGenre");
+     var genreSelect = genre.value;
+      document.location.assign('./../results.html?healthChoice=' + healthChoice + '&region=' + region + '&genreSelect=' + genreSelect);
+     await Promise.race([recipeApiRequest(), movieApiRequest()]);
+      useRecipeResponse();
+      useMovieResponse();
+   });
+ 
+ 
+ });

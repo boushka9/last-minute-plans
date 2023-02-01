@@ -7,38 +7,37 @@
     --shadow: #363852;
 }
 
-
-
 body, p {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--dark);
-    background-color: var(--light);
-    box-sizing: border-box;
-    font-size: 20px;
+font-family: 'Montserrat', sans-serif;
+color: var(--dark);
+background-color: var(--light);
+box-sizing: border-box;
+font-size: 20px;
 }
 
 
 /* MAIN PAGE STYLING */
+
 header#navhead, ul#navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--dark);
-    font-family: 'Nanum Myeongjo', serif;
-    align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: var(--dark);
+font-family: 'Nanum Myeongjo', serif;
+align-items: center;
 }
 
 header#navhead img {
-    width: 325px;
-    margin: 8px;
+width: 325px;
+margin: 8px;
 }
 
 #navbar li {
-    list-style: none;
-    margin: 10px;
-    padding: 5px;
-    text-decoration: none;
-    font-size: 22px;
+list-style: none;
+margin: 10px;
+padding: 5px;
+text-decoration: none;
+font-size: 22px;
 }
 
 a[href], a:link, .search-li {
@@ -47,9 +46,8 @@ a[href], a:link, .search-li {
 } 
 /*nav links change color on hover*/
 #navbar li a:hover {
-    color: var(--logo);
+color: var(--logo);
 }
-
 
 main, .title, .selections, .food, .movie, .past-searches  {
     display: flex;
@@ -66,60 +64,60 @@ main, .selections, .search-li  {
 
 
 h2 {
-    font-size: 30px;
+font-size: 30px;
 }
 
 select {
-    display: inline;
-    background-color: var(--pale);
-    color: var(--dark);
-    margin: 10px 0;
+display: inline;
+background-color: var(--pale);
+color: var(--dark);
+margin: 10px 0;
 }
 
 .food > label, .movie > label {
-    text-align: left;
-    color: var(--dark);
-    font-size: 16px;
+text-align: left;
+color: var(--dark);
+font-size: 16px;
 }
 
-.selections > .btn, .random > .btn {
-    align-self: center;
-    margin-top: 5px;
-    background-color: var(--mid);
-    box-shadow: 1.0px 2.1px 2.1px var(--shadow);
-    transition: all .2s ease-out;
+.selections > .btn, .random > .btn, #clearBtn {
+align-self: center;
+margin-top: 5px;
+background-color: var(--mid);
+box-shadow: 1.0px 2.1px 2.1px var(--shadow);
+transition: all .2s ease-out;
 }
 
-.btn:hover {
-    box-shadow: 1.9px 3.8px 3.8px var(--mid);
-    background-color: var(--dark);
+.btn:hover, #clearBtn:hover {
+box-shadow: 1.9px 3.8px 3.8px var(--mid);
+background-color: var(--dark);
 }
 
 .btn, .btn:focus {
-    background-color: var(--dark);
+background-color: var(--dark);
 }
 
 .selections > .random {
-    margin: 5% 0;
-    justify-content: center;
-    text-align: center;
+margin: 5% 0;
+justify-content: center;
+text-align: center;
 }
 
 .select-wrapper .caret {
-    display: none;
+display: none;
 }    
 
 select:focus {
-    outline: 1px solid var(--mid);
+outline: 1px solid var(--mid);
 }
 
 /* MAIN PAGE STYLING END*/
 
 /* RESULTS/SAVED PAGE STYLING */
 h1 {
-    font-family: 'Nanum Myeongjo', serif;
-    text-align: center;
-    color: var(--logo);
+font-family: 'Nanum Myeongjo', serif;
+text-align: center;
+color: var(--logo);
 }
 .saved-container, .results-container { 
     display: grid;
@@ -139,35 +137,35 @@ h1 {
 }
 
 .text {
-    padding: 0 20px 20px;
-    background-color: var(--pale);
+padding: 0 20px 20px;
+background-color: var(--pale);
 }
 
 .saved-name, .recipe-name, .movie-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3px 10px;
-    background-color: var(--pale);
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 3px 10px;
+background-color: var(--pale);
 }
 
 .saved-name > p, .recipe-name > p, .movie-name > p {
-    background-color: var(--pale);
-    font-size: 2rem;
-    margin: 0px;
+background-color: var(--pale);
+font-size: 2rem;
+margin: 0px;
 }
 
 i {
-    color: var(--logo);
-    font-size: 1.8rem;
-    transition: all .2s ease-out;
+color: var(--logo);
+font-size: 1.8rem;
+transition: all .2s ease-out;
 }
 
 i:hover {
-    font-size: 2.2rem;
+font-size: 2.2rem;
 }
 
-select {
+select, button {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -189,6 +187,53 @@ select {
 }
 
 /* MODAL STYLING */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content p {
+    text-align: center;
+  }
+
+
+  .yes-no {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 

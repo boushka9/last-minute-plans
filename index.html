@@ -12,17 +12,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
-
+    
     <!--Body Text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cf7c2b8cf6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/style.css">
-    
+
+    <!-- import bootstrap cdn
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+     -->
   </head>
   <body>
-
     <header id="navhead">
         <img id="logo" src="./assets/images/last minute plans.png">
         <div>
@@ -45,7 +48,7 @@
   	  <!--Cuisine Type-->
       <div class="selections">  
         <div class="food">
-          <label for="cuisineType">"What kind of food sounds good tonight?"?</label>
+          <label for="cuisineType">What kind of food sounds good tonight?</label>
           <select name="cuisineType" id="cuisineType">
             <option value="" disabled="" selected=""></option>
             <option value="american">American</option>
@@ -60,11 +63,11 @@
           <label for="dietaryRestrictions">Any dietary restrictions?</label>
           <select name="dietaryRestrictions" id="dietaryRestrictions">
             <option value="" disabled="" selected=""></option>
-            <option value="Dairy-Free">Dairy-Free</option>
-            <option value="Gluten-Free">Gluten-Free</option>
-            <option value="Keto-Friendly">Keto-Friendly</option>
-            <option value="Kosher">Kosher</option>
-            <option value="Peanut-Free">Peanut-Free</option>
+            <option value="dairy-free">Dairy-Free</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="keto-friendly">Keto-Friendly</option>
+            <option value="kosher">Kosher</option>
+            <option value="peanut-free">Peanut-Free</option>
           </select>
         </div>
 
@@ -81,7 +84,7 @@
           </select>
         </div> 
 
-        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info" id="choiceBtn">Let's Go!</button>
+        <button class="btn btn-info" id="choiceBtn">Let's Go!</button>
 
         <br>
 
@@ -96,8 +99,24 @@
 
         <section class="past-searches">
           <h2>Check out your past plans!</h2>
+          <!--Empty ul to append li's to-->
           <ul id="stored-searches"></ul>
-          <button class="btn" id="clear">Clear History</button>
+
+          <!-- Trigger/Open The Modal -->
+          <button class="btn btn-info" id="clearBtn">Clear History</button>
+
+          <!-- The Modal -->
+          <div id="clearModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Whoah whoah whoah. If you proceed, you're gonna delete all your past plans. You sure you're ready for that level of commitment?</p>
+              <div class="yes-no">
+                <button id="no" class="btn">Oh whoops. Never mind.</button> <button id="yes" class="btn">I know what I'm about, son.</button>
+              </div>
+            </div>
+          </div>
+
          </section>
     </main>
   </body>
