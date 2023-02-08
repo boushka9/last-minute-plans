@@ -1,0 +1,260 @@
+:root {
+    --logo: #D44a55;
+    --light: #FAFAFA;
+    --pale: #e4e4e9;
+    --dark: #32364f;
+    --mid: #3d5a80;
+    --shadow: #363852;
+}
+
+body, p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/* MAIN PAGE STYLING */
+/* Logo and nav link are in a flexbox with space between them */
+header#navhead, ul#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--dark);
+    font-family: 'Nanum Myeongjo', serif;
+    align-items: center;
+}
+
+/* img on small screen is only 280px so nav link has enough space to display in one line */
+header#navhead img {
+    width: 280px;
+    margin: 8px 0 8px 20px;
+}
+
+#navbar li {
+    list-style: none;
+    margin: 10px 20px 10px 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+/* --light for contranst on dark background*/
+#navbar a[href], #navbar a:link, .search-li {
+    color: var(--light);
+    text-decoration: none;
+} 
+/*nav links change color on hover*/
+#navbar li a:hover {
+    color: var(--logo);
+}
+
+/* each element is a column flexbox for positioning */
+main, .title, .selections, .food, .movie, .past-searches  {
+    display: flex;
+    flex-direction: column;
+}
+
+main, .selections, .search-li  {
+    margin: 15px;
+}
+
+/* items will be centered on all screen sizes */
+.title, .past-searches  {
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+select {
+    display: inline;
+    background-color: var(--pale);
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+/* selections on homebage are centered to the left */
+.food > label, .movie > label {
+    text-align: left;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+/* btns styling */
+.selections > .btn, .random > .btn, #clearBtn {
+    align-self: center;
+    margin-top: 5px;
+    background-color: var(--mid);
+    box-shadow: 1.0px 2.1px 2.1px var(--shadow);
+    transition: all .2s ease-out;
+}
+
+.btn:hover, #clearBtn:hover {
+    box-shadow: 1.9px 3.8px 3.8px var(--mid);
+    background-color: var(--dark);
+}
+
+.btn, .btn:focus {
+    background-color: var(--dark);
+}
+
+
+select:focus {
+    outline: 1px solid var(--shadow);
+}
+/* MAIN PAGE STYLING END*/
+
+/* RESULTS/SAVED PAGE STYLING */
+h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+    color: var(--logo);
+}
+
+.results-container a[href], .movie-name {
+    color: var(--logo);
+}
+.results-container a[href]:hover {
+    color: var(--mid);
+}
+
+/* On a small screen, results display in single column, each 300px wide */
+.results-container { 
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    row-gap: 1.5%;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.recipe-container, .movie-container {
+    box-shadow: 2px 2px 6px 0px  var(--shadow);
+    background-color: var(--pale);
+}
+
+/* size fetched movie img to the results column width */
+.movie-container .size-img {
+    width: 300px;
+}
+
+/* text on result cards */
+.recipe-container p, .movie-container p {
+    text-align: center;
+    background-color: var(--pale);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.recipe-container a, .movie-container a {
+    display: block;
+    text-align: center;
+}
+
+select, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* past searches render on homepage */
+#stored-searches {
+    margin-top: 0px;
+}
+
+.search-li {
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--mid);
+    box-shadow: 2px 2px 6px 0px  var(--shadow);
+    transition: all .2s ease-out;
+}
+
+/* on hover, past searches box shadow changes slightly, not as much as the other buttons */
+.search-li:hover {
+    box-shadow: 1.9px 3.8px 3.8px var(--shadow);
+}
+
+/* MODAL STYLING */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+
+.yes-no {
+    display: flex;
+    justify-content: space-around;
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* When screen is larger than phone, results page has two columns, logo gets larger, and homepage has larger margins*/
+@media screen and (min-width: 782px) {
+    .results-container { 
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 50px;
+        row-gap: 2%;
+    }
+
+    header#navhead img {
+        width: 350px;
+    }
+
+    main {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}    
+
+/* When screen is larger than phone, results page has two columns, logo gets larger, a and homepage has even larger margins*/
+@media screen and (min-width: 992px) {
+    .results-container { 
+        column-gap: 150px;
+        row-gap: 3%;
+    }
+
+    header#navhead img {
+        width: 400px;
+    }
+
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}    
