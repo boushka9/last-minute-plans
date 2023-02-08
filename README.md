@@ -3,9 +3,10 @@
 ## Description
 
 Last Minute Plans is an app to put an end to the age old question, "I don't know, what do you want to do?"
+
 <img src="readmeassets/home.png" alt="Last Minute Plans Home Page" width="300"/>
 
-Designed to generate recipes and movie suggestions using API's, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
+To generate recipes and movie suggestions, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
 
 <img src="readmeassets/options.png" alt="Last Minute Plans Option Select" width="300"/>
 
@@ -13,9 +14,17 @@ Your results will be displayed on the next page.
 
 <img src="readmeassets/resultspage.png" alt="Your Results" width="300"/>
 
-To help you remember search combinations of deliciousness past, your past searches can be found at the bottom of the page. You can clear them out if you want to start fresh.
+Our application is designed to take out the pressure and hassle of deciding what to cook and what to watch so you can spend more time enjoying your evening. 
 
-<img src="readmeassets/searchhistory.png" alt="Your Search History" width="300"/>
+One challenge of creating this app was found in displaying results from the recipe and movie APIs. The ability to automate the API on a button click came down to crafting functions to apply the selected options on the main page with query selectors. 
+We struggled to implement a functional for loop to render 6 items from the API return data. In the end, we successfully added a for loop to create more efficiency and smoothness in rendering. 
+An additional challenge of this project was working with Materialize CSS. Uncovering the quirks of this technology was essential to the final aesthetic and feature functionality of the app itself. 
+After running into several issues initializing Materialize CSS Dropdown menus, the team discovered that they could revert back to their original HTML structure by using option select menus, an alternative form of dropdown menu styled by Materialize CSS. When the app looks good, so does our last-minute casanova.
+
+For future versions of this application, we would like to add a "Feeling Frisky," button, which would generate a random combination of movie and recipe, for the truly undecided or adventurous user. 
+We would also like to implement a “Favorites” page using local storage to keep track of all the good plans you’ve made before.
+
+As it stands, Last Minute Plans is your go-to for a nice date night in. The fill-in-the-blanks for the uninspired, and the spice for the thrill-seeker, Last Minute Plans provides a unique experience for all.
 
 
 ## Installation
@@ -53,10 +62,11 @@ Last Minute Plans Favorites Page
 
 ## Authors
 
-* Emma Boushka - Administrator, Graphic Design, Javacript, Local Storage
-* Joshua Boren - API implementation, JavaScript
-* Christian Killelea - HTML and Front End
-* Samantha Gosselin - Front End Assistance, Modal Notifications, presentation and ReadMe
+* Emma Boushka - Administrator, Graphic Design, Javacript, CSS, Local Storage
+* Joshua Boren - API selection, implementation, and activation, JavaScript
+* Christian Killelea - HTML and Front End design
+* Samantha Gosselin - Front End Assistance, Modal Notifications, Materialize Integration, presentation and ReadMe
+
 
 ## Version History
 
