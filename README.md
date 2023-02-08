@@ -3,6 +3,7 @@
 ## Description
 
 Last Minute Plans is an app to put an end to the age old question, "I don't know, what do you want to do?"
+
 <img src="readmeassets/home.png" alt="Last Minute Plans Home Page" width="300"/>
 
 To generate recipes and movie suggestions, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
@@ -25,6 +26,12 @@ We would also like to implement a “Favorites” page using local storage to ke
 
 As it stands, Last Minute Plans is your go-to for a nice date night in. The fill-in-the-blanks for the uninspired, and the spice for the thrill-seeker, Last Minute Plans provides a unique experience for all.
 
+
+## Installation
+
+No installation is neccessary for this app. Access the application at https://boushka9.github.io/last-minute-plans/ 
+
+
 ## Wire Frames and User Story
 
 ### User Story
@@ -41,8 +48,8 @@ THEN I am presented with one movie/dinner combination
 WHEN I click the option to save a recipe or movie to My Favorites
 THEN My selections will appear on the "My Favorites Page" in the app
 
-### Wire Frames
 
+### Wire Frames
 <img src="readmeassets/LMPMain.jpg" alt="Main Page" width="300"/>
 Last Minute Plans Main Page
 
@@ -59,6 +66,7 @@ Last Minute Plans Favorites Page
 * Joshua Boren - API selection, implementation, and activation, JavaScript
 * Christian Killelea - HTML and Front End design
 * Samantha Gosselin - Front End Assistance, Modal Notifications, Materialize Integration, presentation and ReadMe
+
 
 ## Version History
 

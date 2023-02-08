@@ -2,33 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!--Import Materialize-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Last Minute Plans</title>
+    <title>Your Saved Plans</title>
+      <!--Import Materialize-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!--Header Text-->    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+      <!--Header Text-->    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--Body Text-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cf7c2b8cf6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-    
+      <!--Body Text-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body>
-
     <header id="navhead">
-        <img id="logo" src="./assets/images/last minute plans.png">
+        <img id="logo" src="./assets/images/last minute plans.png" href="index.html">
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Get New Plans</a></li>
-                <li><a href="saved.html">Saved Plans</a></li>
             </ul>
         </div>
     </header>
@@ -38,33 +35,35 @@
         <h1>Making Last Minute Plans?</h1>
         <h2>Can't decide what to eat or what movie to watch for date night?</h2>
         <h2>We've got you covered!</h2>
-        <p class="description">Select what you're in the mood for down below and click Lets Go!</p>
+        <p class="description">Select what you crazy kids are in the mood for down below and click "Let's Go!"</p>
       </section>
       
-      <!--Questions & Dropboxes-->
-  	  <!--Cuisine Type-->
+      <!--Questions & Dropboxes with values corresponding to API inputs-->
+  	 
       <div class="selections">  
         <div class="food">
-          <label for="cuisineType">What kind of food are you and your partner in the mood for?</label>
+           <!--Cuisine Type-->
+          <label for="cuisineType">What kind of food sounds good tonight?</label>
           <select name="cuisineType" id="cuisineType">
             <option value="" disabled="" selected=""></option>
             <option value="american">American</option>
             <option value="asian">Asian</option>
-            <option value="chinese">Chinese</option>
-            <option value="asian">Kosher</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="kosher">Kosher</option>
             <option value="italian">Italian</option>
             <option value="mexican">Mexican</option>
-            <option value="nordic">Nordic</option>
+            <option value="indian">Indian</option>
           </select>
           <!--Dietary Restrictions-->
           <label for="dietaryRestrictions">Any dietary restrictions?</label>
           <select name="dietaryRestrictions" id="dietaryRestrictions">
             <option value="" disabled="" selected=""></option>
-            <option value="Dairy-Free">Dairy-Free</option>
-            <option value="Gluten-Free">Gluten-Free</option>
-            <option value="Keto-Friendly">Keto-Friendly</option>
-            <option value="Kosher">Kosher</option>
-            <option value="Peanut-Free">Peanut-Free</option>
+            <option value="dairy-free">Dairy-Free</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="keto-friendly">Keto-Friendly</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="peanut-free">Peanut-Free</option>
           </select>
         </div>
 
@@ -81,52 +80,34 @@
           </select>
         </div> 
 
-        <button href="#modal1" data-target="modal1" class="btn modal-trigger1 btn-info">Lets Go!</button>
+        <button class="btn btn-info" id="choiceBtn">Let's Go!</button>
 
         <br>
 
-        <div class="random">
-          <h2>Feeling Frisky? </h2>
-          <p class="description">Click on Suprise Me! and see on what kind of culinary and movie adventure we take you on!</p>
-        
-          <button class="btn btn-info">Surprise Me!</button>
+        <section class="past-searches">
+          <h2>Check out your past plans!</h2>
+          <!--Empty ul to append li's to-->
+          <ul id="stored-searches"></ul>
 
-      </div>
+          <!-- Trigger/Open The Modal -->
+          <button class="btn btn-info" id="clearBtn">Clear History</button>
 
-                <!-- Modal Structure 
-      <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+          <!-- The Modal -->
+          <div id="clearModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Whoah whoah whoah. If you proceed, you're gonna delete all your past plans. You sure you're ready for that level of commitment?</p>
+              <div class="yes-no">
+                <button id="no" class="btn">Oh whoops. Never mind.</button> <button id="yes" class="btn">I know what I'm about, son.</button>
+              </div>
+            </div>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="btn green modal-close waves-effect waves-green btn-flat">Yes! Stick to the Plan!</a>
-            <a href="#!" class="btn red modal-close waves-effect waves-green btn-flat">No! These Plans Suck!</a>
-          </div>
-        </div>
-      -->
-        <!--Modal Trigger
-       <script>$(document).ready(function(){
-          $('.modal').modal();
-        }); 
-        </script>
-      -->
+         </section>
     </main>
-      
-      
-       <!--JQuery-->
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
-        <i class="material-icons right">send</i>
-       </script>
-        <script src="./assets/results.js"></script>
-          <script src="./assets/script.js"></script>
-        </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	  <script src="./assets/results.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
-    <script src="./assets/saved.js"></script>
     
   </body>
 

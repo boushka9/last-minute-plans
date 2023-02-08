@@ -2,23 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-        <!--Import Materialize-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Your Saved Plans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Saved Plans</title>
+      <!--Import Materialize-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <!--Header Text-->    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+      <!--Header Text-->    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 
-        <!--Body Text-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/cf7c2b8cf6.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./assets/style.css">
+      <!--Body Text-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body>
     <header id="navhead">
@@ -26,38 +26,31 @@
       <div>
           <ul id="navbar">
               <li><a href="index.html">Get New Plans</a></li>
-              <li><a href="saved.html">Saved Plans</a></li>
           </ul>
       </div>
     </header>
 
     <main>
       <h1>The perfect last minute plans:</h1>
-      <div class="results-container">
-        <article id="recipe-rec">
-          <img class="recipe-img" src="./assets/images/recipe-ex.png">
-          <div class="card-bottom">
-            <div class="recipe-name">
-              <p>Chicken Curry</p>
-              <i class="fa-solid fa-square-plus"></i>
-            </div>
-            <p class="text" class="recipe-description">Bold spices like ginger, cumin, and curry powder add rich layers of flavor to succulent chicken coated in a creamy tomato-based sauce. .</p>
-          </div> 
-        </article>
-        <article class=movie-rec">
-            <img class="movie-img" src="./assets/images/movie-ex.png">
-            <div class="card-bottom">
-              <div class="movie-name">
-                <p>Fight Club</p>
-                <i class="fa-solid fa-square-plus"></i>
-              </div>
-              <p class="text" class="movie-description">An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.</p>
-            </div>  
-          </article>
-    </div>
+        <div class="results-container">
+          <!-- Empty div's for the for loop to render the API response into -->
+          <div class="recipe-container"></div>
+          <div class="recipe-container"></div>
+          <div class="recipe-container"></div>
+          <div class="recipe-container"></div>
+          <div class="recipe-container"></div>
+          <div class="recipe-container"></div>
+          <div class="movie-container"></div>
+          <div class="movie-container"></div>
+          <div class="movie-container"></div>
+          <div class="movie-container"></div>
+          <div class="movie-container"></div>
+          <div class="movie-container"></div>
+        </div>
     </main>
-
-	  <script src="./assets/results.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./assets/results.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
