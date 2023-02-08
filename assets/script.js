@@ -74,8 +74,7 @@ $(document).ready(function () {
      })
 
   
-   //create event listener for the choiceBtn and call recipeApiRequest
- 
+   //create event listener for the choiceBtn, change html location and call recipeApiRequest
    $("#choiceBtn").on("click", async () => {
      var diet = document.getElementById("dietaryRestrictions");
      var cuisineType = document.getElementById("cuisineType");
