@@ -43,6 +43,7 @@ $(document).ready(function () {
 
   // Create a function that takes data from recipeApiRequest and creates a card to dislay on results.html
   function useRecipeResponse(recipeResponse) {
+    //variable for empty div's in html for for loop to loop over
     const recipeCards = document.querySelectorAll(".recipe-container");
     for (var i = 0; i < recipeCards.length; i++) {
       recipeCards[i].innerHTML = "";
