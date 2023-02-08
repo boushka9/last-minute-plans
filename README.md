@@ -5,13 +5,9 @@
 Last Minute Plans is an app to put an end to the age old question, "I don't know, what do you want to do?"
 <img src="readmeassets/home.png" alt="Last Minute Plans Home Page" width="300"/>
 
-Designed to generate recipes and movie suggestions, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
+Designed to generate recipes and movie suggestions using API's, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
 
 <img src="readmeassets/options.png" alt="Last Minute Plans Option Select" width="300"/>
-
-If you're "feeling frisky," click the button to generate a random combination of movie and recipe and let fate decide!
-
-<img src="readmeassets/frisky.png" alt="The Frisky Button" width="300"/>
 
 Your results will be displayed on the next page.
 
@@ -20,6 +16,12 @@ Your results will be displayed on the next page.
 To help you remember search combinations of deliciousness past, your past searches can be found at the bottom of the page. You can clear them out if you want to start fresh.
 
 <img src="readmeassets/searchhistory.png" alt="Your Search History" width="300"/>
+
+
+## Installation
+
+No installation is neccessary for this app. Access the application at https://boushka9.github.io/last-minute-plans/ 
+
 
 ## Wire Frames and User Story
 
@@ -37,8 +39,8 @@ THEN I am presented with one movie/dinner combination
 WHEN I click the option to save a recipe or movie to My Favorites
 THEN My selections will appear on the "My Favorites Page" in the app
 
-### Wire Frames
 
+### Wire Frames
 <img src="readmeassets/LMPMain.jpg" alt="Main Page" width="300"/>
 Last Minute Plans Main Page
 
@@ -53,7 +55,6 @@ Last Minute Plans Favorites Page
 
 * Emma Boushka - Administrator, Graphic Design, Javacript, Local Storage
 * Joshua Boren - API implementation, JavaScript
-* Tiffany Springer - CSS and Materialize
 * Christian Killelea - HTML and Front End
 * Samantha Gosselin - Front End Assistance, Modal Notifications, presentation and ReadMe
 
