@@ -82,7 +82,7 @@ $(document).ready(function () {
      var region = cuisineType.value;
      var genre = document.getElementById("movieGenre");
      var genreSelect = genre.value;
-      document.location.assign('./../boushka9.github.io/results.html?healthChoice=' + healthChoice + '&region=' + region + '&genreSelect=' + genreSelect);
+      document.location.assign('./results.html?healthChoice=' + healthChoice + '&region=' + region + '&genreSelect=' + genreSelect);
      await Promise.race([recipeApiRequest(), movieApiRequest()]);
       useRecipeResponse();
       useMovieResponse();
