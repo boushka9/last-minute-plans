@@ -9,6 +9,7 @@ $(document).ready(function () {
     // Use data from searchParamsArr and store it in variables for the API requests to use
     healthChoice = searchParamsArr[0].split("=").pop();
     region = searchParamsArr[1].split("=").pop();
+    console.log(region);
     genreSelect = searchParamsArr[2].split("=").pop();
     recipeApiRequest(healthChoice, region);
     movieApiRequest(genreSelect);

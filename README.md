@@ -1,18 +1,10 @@
-# Last Minute Plans
+<p align="center">
+    <img src="./readmeassets/last minute plans.png" alt="Logo Header" width=450px>
+</p>
 
-## Description
+## <img src="./readmeassets/about.png" alt="About Header" height="40px">
 
 Last Minute Plans is an app to put an end to the age old question, "I don't know, what do you want to do?"
-
-<img src="readmeassets/home.png" alt="Last Minute Plans Home Page" width="300"/>
-
-To generate recipes and movie suggestions, you have the option of generating a set of plans specific to a cuisine and a genre respectively. 
-
-<img src="readmeassets/options.png" alt="Last Minute Plans Option Select" width="300"/>
-
-Your results will be displayed on the next page.
-
-<img src="readmeassets/resultspage.png" alt="Your Results" width="300"/>
 
 Our application is designed to take out the pressure and hassle of deciding what to cook and what to watch so you can spend more time enjoying your evening. 
 
@@ -27,54 +19,33 @@ We would also like to implement a “Favorites” page using local storage to ke
 As it stands, Last Minute Plans is your go-to for a nice date night in. The fill-in-the-blanks for the uninspired, and the spice for the thrill-seeker, Last Minute Plans provides a unique experience for all.
 
 
-## Installation
+## <img src="./readmeassets/installation.png" alt="Installation Header" height="40px">
 
-No installation is neccessary for this app. Access the application at https://boushka9.github.io/last-minute-plans/ 
-
-
-## Wire Frames and User Story
-
-### User Story
-As a couple with no plans
-I want to see suggested recipes and movies
-So that we can make date plans at the last minute
-
-### Acceptance Criteria
-GIVEN I am presented with the Last Minute Plans application,
-WHEN I select search criteria for dinner and a movie,
-THEN I am presented with 5 recipes and 5 movie suggestions
-WHEN I click the option to randomize selection,
-THEN I am presented with one movie/dinner combination
-WHEN I click the option to save a recipe or movie to My Favorites
-THEN My selections will appear on the "My Favorites Page" in the app
+No installation is necessary for this app. Access the application at https://boushka9.github.io/last-minute-plans/ 
 
 
-### Wire Frames
-<img src="readmeassets/LMPMain.jpg" alt="Main Page" width="300"/>
-Last Minute Plans Main Page
+## <img src="./readmeassets/usage.png" alt="Usage Header" height="40px">
 
-<img src="readmeassets/LMPResults.jpg" alt="Results Page" width="300"/>
-Last Minute Plans Results Page
+1. Select cuisine type and dietary restrictions, and desired movie genre from dropdown menus to narrow down your search parameters
+    - Click 'Let's Go!' to view your movie and recipe suggestions
 
-<img src="readmeassets/LMPFavorites.jpg" alt="Favorites Page" width="300"/>
-Last Minute Plans Favorites Page
+2. To view the entire recipe, click on the recipe link at the bottom of each card
 
+## <img src="./readmeassets/contributors.png" alt="Contributors Header" height="40px">
 
-## Authors
-
-* Emma Boushka - Administrator, Graphic Design, Javacript, CSS, Local Storage
+* Emma Boushka - Lead Developer, Graphic Design, Javacript, CSS, Local Storage
 * Joshua Boren - API selection, implementation, and activation, JavaScript
 * Christian Killelea - HTML and Front End design
 * Samantha Gosselin - Front End Assistance, Modal Notifications, Materialize Integration, presentation and ReadMe
 
 
-## Version History
+## <img src="./readmeassets/version.png" alt="Version Header" height="40px">
 
 * 0.1
     * Initial Release
 
 
-## Acknowledgments
+## <img src="./readmeassets/credits.png" alt="Credits Header" height="40px">
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
@@ -83,3 +54,12 @@ Inspiration, code snippets, etc.
 * [The Movie Database API](https://www.themoviedb.org/)
 * [W3 Schools "How to CSS/Modal"](https://www.w3schools.com/howto/howto_css_modals.asp)
 * [Challenge 6, the Weather App Project](https://boushka9.github.io/rainy-plastic-plants/)
+
+
+## <img src="./readmeassets/screenshots.png" alt="screenshots Header" height="40px">
+
+<p align="center">
+    <img src="./readmeassets/options.png" alt="Selection menus" width=450px style="margin: 0 0 15px 0">
+    <br>
+    <img src="./readmeassets/resultspage.png" alt="Your Results" width="450" style="margin: 0 0 15px 0"/>
+</p>
