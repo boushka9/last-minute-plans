@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/images/last minute plans.png" alt="Logo Header" width=450px>
+    <img src="./readmeassets/lms-logo.png" alt="Logo Header" width=450px>
 </p>
 
 ## <img src="./readmeassets/about.png" alt="About Header" height="40px">
